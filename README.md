@@ -1,21 +1,19 @@
-# vercel-rss-json-proxy
+## vercel-rss-json-proxy
 
 Turn any RSS or Atom feed into a small JSON API on Vercel. Honors origin ETag and Cache-Control for real HTTP caching.
 
 ## Endpoints
 
+```bash
 - `GET /api/rss?url=<encoded_feed_url>`
+```
 
-Example:
+## Example:
 /api/rss?url=https%3A%2F%2Fhnrss.org%2Ffrontpage
-
-bash
-Copy
-Edit
 
 ## Response
 
-```json
+```bash
 {
   "title": "Feed title",
   "link": "https://example.com",
@@ -34,23 +32,20 @@ Sets Cache-Control from the origin if present. Falls back to public, max-age=300
 Browsers and the Vercel CDN can cache responses. If the feed is unchanged, the origin may return 304 Not Modified.
 
 Local dev
-bash
-Copy
-Edit
-npm i
-npx vercel dev
+```
+```bash
 # open http://localhost:3000/api/rss?url=https%3A%2F%2Fhnrss.org%2Ffrontpage
-Deploy
-bash
-Copy
-Edit
+```
+```bash
 npx vercel
-Security
+```
+
+## Security
 Whitelist feed hosts if needed. For example, allow only your own feeds.
 
 Consider adding a simple HMAC signature for approved clients.
 
-Notes
+## Notes
 No persistence used. Add Vercel KV if you need global rate limiting.
 
 Parser: fast-xml-parser with minimal config.
