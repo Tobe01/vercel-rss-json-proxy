@@ -1,0 +1,14 @@
+{
+  "name": "vercel-rss-json-proxy",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "node api/rss.js",
+    "lint": "echo \"no lint configured\""
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.5.0"
+  }
+}
