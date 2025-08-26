@@ -49,3 +49,6 @@ Consider adding a simple HMAC signature for approved clients.
 No persistence used. Add Vercel KV if you need global rate limiting.
 
 Parser: fast-xml-parser with minimal config.
+
+## View Blog Article
+https://tobechiduru.hashnode.dev/turning-any-rss-feed-into-a-fast-json-api-on-vercel
